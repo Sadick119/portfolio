@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EricDev — Web Developer, App Developer & UI/UX Designer</title>
+  <meta name="description" content="Portfolio of Eric — Creative Web Developer, Mobile App Developer, and UI/UX Designer building digital experiences that make an impact.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-main text-white">
+
+  <!-- Interactive Ambient Neon Red Glow Background Canvas -->
+  <canvas id="ambient-canvas" class="ambient-canvas"></canvas>
+
+  <!-- Glowing Curved Ambient Light Trails -->
+  <div class="ambient-light top-right-glow" aria-hidden="true"></div>
+  <div class="ambient-light center-red-glow" aria-hidden="true"></div>
+  <div class="ambient-light bottom-glow" aria-hidden="true"></div>
+  <div class="curved-red-ray top-ray" aria-hidden="true"></div>
+  <div class="curved-red-ray right-ray" aria-hidden="true"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="navbar-wrapper" id="navbar">
+    <div class="container nav-container">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" aria-label="EricDev Home">
+        <span class="logo-icon-wrapper">
+          <svg class="logo-icon" viewBox="0 0 100 80" fill="none">
+            <path d="M12 10 H88 C89 10 90 12 88 16 L76 28 H20 C14 28 10 24 12 18 Z" fill="url(#logoGrad)" />
+            <path d="M18 36 H70 C72 36 74 38 72 42 L62 50 H22 C18 50 16 46 18 40 Z" fill="url(#logoGrad)" />
+            <path d="M22 58 H84 C86 58 88 60 86 64 L72 74 H16 C12 74 12 68 18 60 Z" fill="url(#logoGrad)" />
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="100" y2="80" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#FF2A4D" />
+                <stop offset="100%" stop-color="#E50914" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="logo-text">EricDev</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-links-desktop" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Right Action & Mobile Toggle -->
+      <div class="nav-actions">
+        <button class="btn btn-primary btn-pill talk-btn" id="open-contact-btn">
+          <span>Let's Talk</span>
+          <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="hamburger-btn" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Slide-out Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <nav class="mobile-nav-links">
+        <a href="#home" class="mobile-link active">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#portfolio" class="mobile-link">Portfolio</a>
+        <a href="#testimonials" class="mobile-link">Testimonials</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+      </nav>
+      <div class="mobile-action-wrap">
+        <button class="btn btn-primary btn-pill w-100" id="mobile-talk-btn">
+          <span>Let's Talk</span>
+          <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        
+        <!-- Hero Left Column: Info & Copy -->
+        <div class="hero-content">
+          
+          <!-- Status Pill Badge -->
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span class="status-text">Available for new projects</span>
+          </div>
+
+          <!-- Hero Headline -->
+          <h1 class="hero-title">
+            I Build Digital<br>
+            Experiences That<br>
+            Make an <span class="text-highlight">Impact.</span>
+          </h1>
+
+          <!-- Hero Paragraph -->
+          <p class="hero-description">
+            I'm Eric, a passionate Web Developer, App Developer and UI/UX Designer. 
+            I help brands and individuals turn their ideas into modern, powerful and engaging digital solutions.
+          </p>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-actions">
+            <button class="btn btn-primary btn-pill hero-btn-hire" id="hero-hire-btn">
+              <span>Hire Me</span>
+              <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+
+            <a href="#portfolio" class="btn btn-outline btn-pill hero-btn-work" id="hero-view-work-btn">
+              <span>View My Work</span>
+              <span class="play-icon-circle">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+            </a>
+          </div>
+
+          <!-- Social Proof Avatar Stack -->
+          <div class="hero-proof">
+            <div class="avatar-stack">
+              <img src="assets/images/avatar-1.svg" alt="Client 1" class="avatar-img" width="38" height="38">
+              <img src="assets/images/avatar-2.svg" alt="Client 2" class="avatar-img" width="38" height="38">
+              <img src="assets/images/avatar-3.svg" alt="Client 3" class="avatar-img" width="38" height="38">
+              <img src="assets/images/avatar-4.svg" alt="Client 4" class="avatar-img" width="38" height="38">
+            </div>
+            <div class="proof-text">
+              <strong>Trusted by 50+ clients</strong><br>
+              <span>across Ghana and beyond</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Right Column: Slanted Laptop Mockup & Floating Badges -->
+        <div class="hero-visual">
+          <div class="mockup-stage">
+            
+            <!-- Neon Ambient Glow behind Laptop -->
+            <div class="laptop-glow-halo"></div>
+
+            <!-- Laptop Graphic -->
+            <img src="assets/images/hero-laptop.svg" alt="EricDev Modern Laptop Code Showcase" class="hero-laptop-img">
+
+            <!-- Floating Skill Badge 1: Web Development -->
+            <div class="floating-badge badge-web" data-speed="1.2">
+              <div class="badge-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div class="badge-info">
+                <h4 class="badge-title">Web Development</h4>
+                <p class="badge-sub">Modern &amp; Fast</p>
+              </div>
+            </div>
+
+            <!-- Floating Skill Badge 2: App Development -->
+            <div class="floating-badge badge-app" data-speed="0.8">
+              <div class="badge-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+              </div>
+              <div class="badge-info">
+                <h4 class="badge-title">App Development</h4>
+                <p class="badge-sub">Android &amp; iOS</p>
+              </div>
+            </div>
+
+            <!-- Floating Skill Badge 3: UI/UX Design -->
+            <div class="floating-badge badge-ui" data-speed="1.5">
+              <div class="badge-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                  <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                  <path d="M2 2l7.586 7.586"></path>
+                  <circle cx="11" cy="11" r="2"></circle>
+                </svg>
+              </div>
+              <div class="badge-info">
+                <h4 class="badge-title">UI/UX Design</h4>
+                <p class="badge-sub">Clean &amp; Creative</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section class="services-section section-padding" id="services">
+      <div class="container services-container">
+        
+        <!-- Left Section Heading & Description -->
+        <div class="section-side-header">
+          <div class="section-tag">
+            <span class="tag-dash"></span>
+            <span>My Services</span>
+          </div>
+          <h2 class="section-title">
+            What I Do <span class="text-highlight">Best</span>
+          </h2>
+          <p class="section-desc">
+            From ideas to execution — I offer complete digital solutions.
+          </p>
+          <button class="btn btn-outline btn-pill" id="explore-services-btn">
+            <span>Explore All Services</span>
+            <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Right 3 Services Cards Grid -->
+        <div class="services-grid">
+          
+          <!-- Service Card 1 -->
+          <div class="card service-card" data-service="web">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <div class="service-content-wrap">
+              <h3 class="service-title">Web Development</h3>
+              <p class="service-text">
+                Modern, responsive and scalable websites.
+              </p>
+            </div>
+            <button class="service-link-btn" data-modal="service-web">
+              <span class="learn-more-text">Learn More</span>
+              <svg class="link-arrow" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <div class="service-chevron-mobile" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="card service-card" data-service="app">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+            </div>
+            <div class="service-content-wrap">
+              <h3 class="service-title">App Development</h3>
+              <p class="service-text">
+                Powerful mobile apps for Android &amp; iOS.
+              </p>
+            </div>
+            <button class="service-link-btn" data-modal="service-app">
+              <span class="learn-more-text">Learn More</span>
+              <svg class="link-arrow" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <div class="service-chevron-mobile" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="card service-card" data-service="uiux">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                <path d="M2 2l7.586 7.586"></path>
+                <circle cx="11" cy="11" r="2"></circle>
+              </svg>
+            </div>
+            <div class="service-content-wrap">
+              <h3 class="service-title">UI/UX Design</h3>
+              <p class="service-text">
+                Clean &amp; creative designs that users love.
+              </p>
+            </div>
+            <button class="service-link-btn" data-modal="service-uiux">
+              <span class="learn-more-text">Learn More</span>
+              <svg class="link-arrow" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <div class="service-chevron-mobile" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== PORTFOLIO SECTION ==================== -->
+    <section class="portfolio-section section-padding" id="portfolio">
+      <div class="container portfolio-container">
+        
+        <!-- Left Section Heading & Nav Controls -->
+        <div class="section-side-header">
+          <div class="section-tag">
+            <span class="tag-dash"></span>
+            <span>My Portfolio</span>
+          </div>
+          <h2 class="section-title">
+            Some of <span class="text-highlight">My Work</span>
+          </h2>
+          <p class="section-desc">
+            A showcase of my latest projects, from websites to mobile apps and UI designs.
+          </p>
+          
+          <div class="portfolio-header-actions">
+            <button class="btn btn-outline btn-pill" id="view-all-projects-btn">
+              <span>View All Projects</span>
+              <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Carousel Arrow Buttons -->
+          <div class="carousel-nav-arrows">
+            <button class="carousel-arrow prev-btn" id="portfolio-prev-btn" aria-label="Previous Project">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+            </button>
+            <button class="carousel-arrow next-btn" id="portfolio-next-btn" aria-label="Next Project">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Right: Interactive Projects Carousel Track -->
+        <div class="portfolio-carousel-wrapper">
+          <div class="portfolio-track" id="portfolio-track">
+            
+            <!-- Project Card 1: Business Website -->
+            <div class="card project-card" data-project="business-website">
+              <div class="project-mockup-wrap">
+                <img src="assets/images/project-website.svg" alt="Business Website Preview" class="project-img">
+                <div class="project-overlay">
+                  <span class="preview-text">Click to Inspect Project</span>
+                </div>
+              </div>
+              <div class="project-details">
+                <div class="project-category-badge">
+                  <span class="badge-dot red"></span>
+                  <span>Web Design</span>
+                </div>
+                <h3 class="project-title">Business Website</h3>
+                <p class="project-sub">Modern corporate website</p>
+              </div>
+            </div>
+
+            <!-- Project Card 2: TaskFlow App -->
+            <div class="card project-card" data-project="taskflow-app">
+              <div class="project-mockup-wrap">
+                <img src="assets/images/project-app.svg" alt="TaskFlow App Preview" class="project-img">
+                <div class="project-overlay">
+                  <span class="preview-text">Click to Inspect Project</span>
+                </div>
+              </div>
+              <div class="project-details">
+                <div class="project-category-badge">
+                  <span class="badge-dot red"></span>
+                  <span>App Development</span>
+                </div>
+                <h3 class="project-title">TaskFlow App</h3>
+                <p class="project-sub">Productivity App</p>
+              </div>
+            </div>
+
+            <!-- Project Card 3: Admin Dashboard -->
+            <div class="card project-card" data-project="admin-dashboard">
+              <div class="project-mockup-wrap">
+                <img src="assets/images/project-dashboard.svg" alt="Admin Dashboard Preview" class="project-img">
+                <div class="project-overlay">
+                  <span class="preview-text">Click to Inspect Project</span>
+                </div>
+              </div>
+              <div class="project-details">
+                <div class="project-category-badge">
+                  <span class="badge-dot red"></span>
+                  <span>UI Design</span>
+                </div>
+                <h3 class="project-title">Admin Dashboard</h3>
+                <p class="project-sub">Management Panel</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Overlaid mobile next arrow button -->
+          <button class="portfolio-mobile-arrow" id="portfolio-mobile-next-btn" aria-label="Next Project">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+
+          <!-- Carousel Indicator Dots -->
+          <div class="carousel-dots" id="portfolio-dots">
+            <button class="dot active" data-index="0" aria-label="Slide 1"></button>
+            <button class="dot" data-index="1" aria-label="Slide 2"></button>
+            <button class="dot" data-index="2" aria-label="Slide 3"></button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ME & STATS SECTION ==================== -->
+    <section class="about-section section-padding" id="about">
+      <div class="container about-container">
+        
+        <!-- Left: Bio & CTA -->
+        <div class="section-side-header">
+          <div class="section-tag">
+            <span class="tag-dash"></span>
+            <span>About Me</span>
+          </div>
+          <h2 class="section-title">
+            Turning Ideas<br>
+            Into <span class="text-highlight">Reality</span>
+          </h2>
+          <p class="section-desc">
+            I'm Eric, a creative developer who loves building innovative solutions. 
+            I'm always exploring new technologies to create better digital experiences.
+          </p>
+          <button class="btn btn-primary btn-pill" id="about-more-btn">
+            <span>Know More About Me</span>
+            <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Right: 4 Interactive Stats Cards -->
+        <div class="stats-grid">
+          
+          <!-- Stat 1: 50+ Projects -->
+          <div class="card stat-card">
+            <div class="stat-icon-wrap">
+              <!-- Rocket Icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+              </svg>
+            </div>
+            <div class="stat-number-wrap">
+              <span class="stat-number count-up" data-target="50">0</span><span class="stat-plus">+</span>
+            </div>
+            <p class="stat-label">Projects Completed</p>
+          </div>
+
+          <!-- Stat 2: 100% Satisfaction -->
+          <div class="card stat-card">
+            <div class="stat-icon-wrap">
+              <!-- Smile Icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                <line x1="15" y1="9" x2="15.01" y2="9"></line>
+              </svg>
+            </div>
+            <div class="stat-number-wrap">
+              <span class="stat-number count-up" data-target="100">0</span><span class="stat-plus">%</span>
+            </div>
+            <p class="stat-label">Client Satisfaction</p>
+          </div>
+
+          <!-- Stat 3: 2+ Years Experience -->
+          <div class="card stat-card">
+            <div class="stat-icon-wrap">
+              <!-- Star Icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <div class="stat-number-wrap">
+              <span class="stat-number count-up" data-target="2">0</span><span class="stat-plus">+</span>
+            </div>
+            <p class="stat-label">Years Experience</p>
+          </div>
+
+          <!-- Stat 4: Always Delivering Excellence -->
+          <div class="card stat-card stat-card-always">
+            <div class="stat-icon-wrap">
+              <!-- Trophy Icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                <path d="M4 22h16"></path>
+                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+              </svg>
+            </div>
+            <div class="stat-number-wrap">
+              <span class="stat-number text-always">Always</span>
+            </div>
+            <p class="stat-label">Delivering Excellence</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS & CTA SECTION ==================== -->
+    <section class="testimonials-cta-section section-padding" id="testimonials">
+      <div class="container testimonials-cta-container">
+        
+        <!-- Left: Testimonials Intro & Nav -->
+        <div class="section-side-header">
+          <div class="section-tag">
+            <span class="tag-dash"></span>
+            <span>Testimonials</span>
+          </div>
+          <h2 class="section-title">
+            What Clients <span class="text-highlight">Say</span>
+          </h2>
+          <p class="section-desc">
+            Don't just take my word for it — here's what some of my clients have to say.
+          </p>
+          <button class="btn btn-outline btn-pill" id="read-reviews-btn">
+            <span>Read More Reviews</span>
+            <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+
+          <!-- Testimonial Carousel Arrow Controls -->
+          <div class="carousel-nav-arrows">
+            <button class="carousel-arrow prev-btn" id="testimonial-prev-btn" aria-label="Previous Review">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+            </button>
+            <button class="carousel-arrow next-btn" id="testimonial-next-btn" aria-label="Next Review">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Middle: Dynamic Testimonial Card Slider -->
+        <div class="testimonial-card-wrapper">
+          <button class="carousel-arrow prev-btn mobile-testimonial-arrow" id="testimonial-mobile-prev-btn" aria-label="Previous Review">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </button>
+
+          <div class="card testimonial-card" id="testimonial-card">
+            
+            <!-- Red Double Quotes Icon -->
+            <div class="quote-icon">
+              <svg viewBox="0 0 36 28" fill="currentColor">
+                <path d="M0 16.8C0 7.2 6.8 1.4 15.2 0L16.8 4C10.8 5.6 7.6 9.2 7.2 12.8C8.8 12.4 10.4 12.8 12 14C14 15.6 15.2 18 15.2 20.8C15.2 24.8 12 28 8 28C3.6 28 0 23.6 0 16.8ZM19.2 16.8C19.2 7.2 26 1.4 34.4 0L36 4C30 5.6 26.8 9.2 26.4 12.8C28 12.4 29.6 12.8 31.2 14C33.2 15.6 34.4 18 34.4 20.8C34.4 24.8 31.2 28 27.2 28C22.8 28 19.2 23.6 19.2 16.8Z" />
+              </svg>
+            </div>
+
+            <!-- Quote Text -->
+            <p class="testimonial-quote" id="testimonial-text">
+              "Eric delivered an amazing website beyond our expectations. Professional, creative and very responsive!"
+            </p>
+
+            <!-- 5 Glowing Red Stars -->
+            <div class="stars-rating" aria-label="5 out of 5 stars">
+              <span class="star-icon">★</span>
+              <span class="star-icon">★</span>
+              <span class="star-icon">★</span>
+              <span class="star-icon">★</span>
+              <span class="star-icon">★</span>
+            </div>
+
+            <!-- Author Signature -->
+            <div class="testimonial-author-wrap">
+              <p class="testimonial-author" id="testimonial-author">— Happy Client</p>
+              <p class="testimonial-role" id="testimonial-role">Founder, TechSprint Ghana</p>
+            </div>
+
+            <!-- Pagination Dots -->
+            <div class="carousel-dots testimonial-dots" id="testimonial-dots">
+              <button class="dot active" data-index="0" aria-label="Review 1"></button>
+              <button class="dot" data-index="1" aria-label="Review 2"></button>
+              <button class="dot" data-index="2" aria-label="Review 3"></button>
+            </div>
+
+          </div>
+
+          <button class="carousel-arrow next-btn mobile-testimonial-arrow" id="testimonial-mobile-next-btn" aria-label="Next Review">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Right: "Ready to Work Together?" Crimson Gradient CTA Box -->
+        <div class="cta-card-wrapper" id="contact">
+          <div class="cta-card">
+            <div class="cta-content-group">
+              <!-- White Paper Airplane in Translucent Circle -->
+              <div class="cta-plane-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                </svg>
+              </div>
+
+              <div class="cta-text-wrap">
+                <!-- CTA Titles -->
+                <h3 class="cta-title">Ready to Work Together?</h3>
+                <p class="cta-subtitle">
+                  Let's bring your ideas to life. Get in touch today!
+                </p>
+              </div>
+            </div>
+
+            <!-- White Pill Button with Dark Text -->
+            <button class="btn btn-white-pill" id="cta-contact-btn">
+              <span>Contact Me</span>
+              <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer-section">
+    <!-- Subtle Red Glow Separator Line -->
+    <div class="footer-glow-separator"></div>
+
+    <div class="container footer-container">
+      
+      <!-- Footer Left: Logo & Tagline -->
+      <div class="footer-brand">
+        <a href="#home" class="brand-logo footer-logo">
+          <span class="logo-icon-wrapper">
+            <svg class="logo-icon" viewBox="0 0 100 80" fill="none">
+              <path d="M12 10 H88 C89 10 90 12 88 16 L76 28 H20 C14 28 10 24 12 18 Z" fill="url(#footerLogoGrad)" />
+              <path d="M18 36 H70 C72 36 74 38 72 42 L62 50 H22 C18 50 16 46 18 40 Z" fill="url(#footerLogoGrad)" />
+              <path d="M22 58 H84 C86 58 88 60 86 64 L72 74 H16 C12 74 12 68 18 60 Z" fill="url(#footerLogoGrad)" />
+              <defs>
+                <linearGradient id="footerLogoGrad" x1="0" y1="0" x2="100" y2="80" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#FF2A4D" />
+                  <stop offset="100%" stop-color="#E50914" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="logo-text">EricDev</span>
+        </a>
+        <p class="footer-tagline">Build • Design • Innovate</p>
+      </div>
+
+      <!-- Footer Center: Social Media Links -->
+      <div class="footer-socials">
+        <!-- X / Twitter -->
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.69 1.69 0 0 0 1.7-1.68 1.7 1.7 0 0 0-1.7-1.69 1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.97v-8.37H5.07v8.37h2.78z"/>
+          </svg>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Footer Right: Copyright & Back to Top -->
+      <div class="footer-meta">
+        <p class="copyright-text">© 2026 EricDev. All rights reserved.</p>
+        <button class="back-to-top-btn" id="back-to-top" aria-label="Scroll to top of page">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== INTERACTIVE MODALS ==================== -->
+
+  <!-- 1. Contact / Hire Me Modal -->
+  <div class="modal-overlay" id="contact-modal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="close-contact-modal" aria-label="Close modal">✕</button>
+      
+      <div class="modal-header">
+        <div class="modal-icon-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+          </svg>
+        </div>
+        <h3 class="modal-title">Let's Build Something <span class="text-highlight">Great</span></h3>
+        <p class="modal-sub">Tell me about your project, timeline, and goals. I usually reply within 24 hours.</p>
+      </div>
+
+      <form id="contact-form" class="modal-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contact-name">Your Name *</label>
+            <input type="text" id="contact-name" name="name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email Address *</label>
+            <input type="email" id="contact-email" name="email" placeholder="john@example.com" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contact-service">Service Needed</label>
+            <select id="contact-service" name="service">
+              <option value="Web Development">Web Development</option>
+              <option value="Mobile App Development">Mobile App Development</option>
+              <option value="UI/UX Design">UI/UX Design</option>
+              <option value="Full Digital Solution">Full Digital Solution (Design + Code)</option>
+              <option value="Consultation">Consultation &amp; Review</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contact-budget">Estimated Budget</label>
+            <select id="contact-budget" name="budget">
+              <option value="$1k - $3k">$1,000 — $3,000</option>
+              <option value="$3k - $7k">$3,000 — $7,000</option>
+              <option value="$7k - $15k">$7,000 — $15,000</option>
+              <option value="$15k+">$15,000+</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="contact-message">Project Details *</label>
+          <textarea id="contact-message" name="message" rows="4" placeholder="Briefly describe your vision, goals, and key deliverables..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-pill w-100 form-submit-btn" id="form-submit-btn">
+          <span class="btn-text">Send Message</span>
+          <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. Project Details Modal -->
+  <div class="modal-overlay" id="project-modal" aria-hidden="true">
+    <div class="modal-card modal-large">
+      <button class="modal-close-btn" id="close-project-modal" aria-label="Close project modal">✕</button>
+      
+      <div class="project-modal-content" id="project-modal-content">
+        <!-- Dynamically injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Service Details Modal -->
+  <div class="modal-overlay" id="service-modal" aria-hidden="true">
+    <div class="modal-card modal-large">
+      <button class="modal-close-btn" id="close-service-modal" aria-label="Close service modal">✕</button>
+      
+      <div class="service-modal-content" id="service-modal-content">
+        <!-- Dynamically injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. About Me Deep-Dive Modal -->
+  <div class="modal-overlay" id="about-modal" aria-hidden="true">
+    <div class="modal-card modal-large">
+      <button class="modal-close-btn" id="close-about-modal" aria-label="Close about modal">✕</button>
+      
+      <div class="about-modal-inner">
+        <div class="modal-header">
+          <div class="modal-icon-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <h3 class="modal-title">About <span class="text-highlight">Eric</span></h3>
+          <p class="modal-sub">Full Stack Web &amp; Mobile Engineer with a flair for high-impact UI/UX Design.</p>
+        </div>
+
+        <div class="about-details-grid">
+          <div class="about-bio-box">
+            <h4>My Mission</h4>
+            <p>
+              I believe software should be as delightful to use as it is robust under the hood. 
+              Based in Ghana and working with clients worldwide, I craft end-to-end digital experiences 
+              ranging from lightning-fast web applications to scalable iOS/Android apps and pixel-perfect design systems.
+            </p>
+            <div class="about-contact-quick">
+              <div><strong>Location:</strong> Accra, Ghana &amp; Remote Global</div>
+              <div><strong>Specialization:</strong> Full Stack Web, Flutter/React Native, UI/UX</div>
+              <div><strong>Status:</strong> Open for Freelance &amp; Contract Roles</div>
+            </div>
+          </div>
+
+          <div class="about-skills-box">
+            <h4>Core Tech Stack &amp; Skills</h4>
+            <div class="skills-pill-group">
+              <span class="skill-pill">React.js</span>
+              <span class="skill-pill">Next.js</span>
+              <span class="skill-pill">TypeScript</span>
+              <span class="skill-pill">Flutter</span>
+              <span class="skill-pill">Node.js</span>
+              <span class="skill-pill">Tailwind CSS</span>
+              <span class="skill-pill">Figma</span>
+              <span class="skill-pill">UI/UX Prototyping</span>
+              <span class="skill-pill">GraphQL / REST</span>
+              <span class="skill-pill">PostgreSQL / MongoDB</span>
+              <span class="skill-pill">Firebase</span>
+              <span class="skill-pill">Git / CI/CD</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer-cta">
+          <button class="btn btn-primary btn-pill" id="about-modal-hire-btn">
+            <span>Work With Me</span>
+            <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Main JavaScript App -->
+  <script src="js/app.js"></script>
+</body>
+</html>
