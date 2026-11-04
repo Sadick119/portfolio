@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Full responsive layout across mobile, tablet, and ultra-wide screens'
       ],
       liveUrl: 'https://example.com/apex-capital',
-      githubUrl: 'https://github.com/ericdev/apex-capital-web'
+      githubUrl: 'https://github.com/Sadick119/portfolio'
     },
     'taskflow-app': {
       title: 'TaskFlow App — Productivity Redefined',
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Over 10,000 active beta downloads on Google Play & TestFlight'
       ],
       liveUrl: 'https://example.com/taskflow',
-      githubUrl: 'https://github.com/ericdev/taskflow-flutter-app'
+      githubUrl: 'https://github.com/Sadick119/portfolio'
     },
     'admin-dashboard': {
       title: 'Admin Dashboard — Pulse Metrics',
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'WCAG AA accessible interface with intuitive keyboard navigation'
       ],
       liveUrl: 'https://example.com/pulse-dashboard',
-      githubUrl: 'https://github.com/ericdev/pulse-admin-dashboard'
+      githubUrl: 'https://github.com/Sadick119/portfolio'
     }
   };
 
