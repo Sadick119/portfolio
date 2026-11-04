@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 340" fill="none">
+  <defs>
+    <linearGradient id="dashBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121319"/>
+      <stop offset="100%" stop-color="#0c0d11"/>
+    </linearGradient>
+    <filter id="dashGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="15" stdDeviation="16" flood-color="#FF113A" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <g transform="translate(35, 25)" filter="url(#dashGlow)">
+    <!-- Monitor Bezel -->
+    <rect x="0" y="0" width="430" height="270" rx="12" fill="#15171d" stroke="#282a35" stroke-width="2"/>
+    
+    <!-- Screen Viewport -->
+    <rect x="10" y="10" width="410" height="250" rx="6" fill="url(#dashBg)"/>
+    
+    <!-- Left Sidebar -->
+    <rect x="10" y="10" width="75" height="250" rx="6" fill="#0f1015" stroke="#1d1e27" stroke-width="1"/>
+    <circle cx="30" cy="28" r="6" fill="#FF2A4B"/>
+    <rect x="42" y="25" width="32" height="6" rx="2" fill="#FFFFFF"/>
+    
+    <!-- Sidebar nav items -->
+    <rect x="18" y="55" width="58" height="18" rx="5" fill="#FF2A4B" fill-opacity="0.15"/>
+    <rect x="25" y="61" width="45" height="5" rx="2" fill="#FF2A4B"/>
+    
+    <rect x="25" y="85" width="45" height="5" rx="2" fill="#585d70"/>
+    <rect x="25" y="105" width="40" height="5" rx="2" fill="#585d70"/>
+    <rect x="25" y="125" width="48" height="5" rx="2" fill="#585d70"/>
+    <rect x="25" y="145" width="35" height="5" rx="2" fill="#585d70"/>
+
+    <!-- Main Content Header -->
+    <rect x="100" y="24" width="70" height="8" rx="2" fill="#FFFFFF"/>
+    <rect x="100" y="36" width="110" height="4" rx="2" fill="#666b80"/>
+    <circle cx="395" cy="28" r="10" fill="#20222c"/>
+    <circle cx="395" cy="28" r="5" fill="#FF2A4B"/>
+
+    <!-- Top 3 Stat Mini-Widgets -->
+    <rect x="100" y="52" width="95" height="46" rx="8" fill="#171822" stroke="#272938" stroke-width="1"/>
+    <rect x="110" y="62" width="45" height="4" rx="2" fill="#808599"/>
+    <rect x="110" y="72" width="55" height="10" rx="2" fill="#FFFFFF"/>
+    <path d="M 165 82 L 182 72" stroke="#00E676" stroke-width="2" stroke-linecap="round"/>
+
+    <rect x="205" y="52" width="95" height="46" rx="8" fill="#171822" stroke="#272938" stroke-width="1"/>
+    <rect x="215" y="62" width="45" height="4" rx="2" fill="#808599"/>
+    <rect x="215" y="72" width="55" height="10" rx="2" fill="#FFFFFF"/>
+    <path d="M 270 74 L 287 80" stroke="#FF2A4B" stroke-width="2" stroke-linecap="round"/>
+
+    <rect x="310" y="52" width="95" height="46" rx="8" fill="#171822" stroke="#FF2A4B" stroke-opacity="0.3" stroke-width="1"/>
+    <rect x="320" y="62" width="45" height="4" rx="2" fill="#FF2A4B"/>
+    <rect x="320" y="72" width="55" height="10" rx="2" fill="#FFFFFF"/>
+
+    <!-- Main Chart Section -->
+    <rect x="100" y="108" width="195" height="135" rx="8" fill="#171822" stroke="#272938" stroke-width="1"/>
+    <rect x="112" y="118" width="60" height="5" rx="2" fill="#FFFFFF"/>
+    <!-- Line chart with red area gradient -->
+    <path d="M 115 215 L 140 190 L 170 200 L 200 160 L 230 175 L 260 140 L 280 150 L 280 220 L 115 220 Z" fill="#FF2A4B" fill-opacity="0.15"/>
+    <path d="M 115 215 L 140 190 L 170 200 L 200 160 L 230 175 L 260 140 L 280 150" stroke="#FF2A4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="260" cy="140" r="3.5" fill="#FFFFFF" stroke="#FF2A4B" stroke-width="2"/>
+
+    <!-- Right Side Table / Activity Section -->
+    <rect x="305" y="108" width="100" height="135" rx="8" fill="#171822" stroke="#272938" stroke-width="1"/>
+    <rect x="315" y="118" width="45" height="5" rx="2" fill="#FFFFFF"/>
+    
+    <!-- Table rows -->
+    <rect x="315" y="135" width="80" height="22" rx="4" fill="#1b1c28"/>
+    <circle cx="325" cy="146" r="4" fill="#FF2A4B"/>
+    <rect x="335" y="144" width="45" height="4" rx="2" fill="#999eb0"/>
+
+    <rect x="315" y="163" width="80" height="22" rx="4" fill="#1b1c28"/>
+    <circle cx="325" cy="174" r="4" fill="#00E676"/>
+    <rect x="335" y="172" width="50" height="4" rx="2" fill="#999eb0"/>
+
+    <rect x="315" y="191" width="80" height="22" rx="4" fill="#1b1c28"/>
+    <circle cx="325" cy="202" r="4" fill="#FF9100"/>
+    <rect x="335" y="200" width="35" height="4" rx="2" fill="#999eb0"/>
+  </g>
+</svg>
