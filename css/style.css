@@ -905,13 +905,14 @@ h1, h2, h3, h4 {
 }
 
 .portfolio-track {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 22px;
   transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .project-card {
+  flex: 0 0 calc(33.333% - 15px);
+  min-width: 280px;
   padding: 20px;
   cursor: pointer;
   overflow: hidden;
