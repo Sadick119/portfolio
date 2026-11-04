@@ -11,61 +11,80 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
 
   const projectsData = {
-    'business-website': {
-      title: 'Business Website — Apex Capital',
+    'hallmark-website': {
+      title: 'Hallmark Website — Divine Hallmark Int. School',
       category: 'Web Design & Development',
-      badge: 'Web Design',
-      image: 'assets/images/project-website.svg',
-      client: 'Apex Capital & Investments Ltd',
+      badge: 'Web Development',
+      image: 'assets/images/project-hallmark.svg',
+      client: 'Divine Hallmark International School',
       duration: '4 Weeks',
-      role: 'Lead Full-Stack Web Developer & UI Designer',
-      overview: 'A sleek, high-conversion corporate web platform designed for an investment and business advisory firm. Features bespoke dark aesthetic, lightning-fast Next.js rendering, interactive financial metrics, and multi-currency advisory calculators.',
-      technologies: ['Next.js 14', 'React', 'Tailwind CSS', 'Framer Motion', 'TypeScript', 'Node.js'],
+      role: 'Lead Full-Stack Web Developer',
+      overview: 'An institutional web platform engineered for Divine Hallmark International School. Features online admissions workflows, student academic portals, responsive curriculum showcase, faculty profiles, and school event announcements.',
+      technologies: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Web', 'Git / GitHub Pages'],
       deliverables: [
-        'Custom Dark Neon UI Design System in Figma',
-        'Headless CMS integration for dynamic blog & reports',
-        'Sub-second page load times with 99+ Google Lighthouse score',
-        'Full responsive layout across mobile, tablet, and ultra-wide screens'
+        'Complete institutional responsive website design & frontend architecture',
+        'Online admissions portal & parent inquiry lead generation form',
+        'Interactive academic calendar & campus facilities showcase',
+        'Mobile-friendly navigation tuned for fast mobile networks in Ghana'
       ],
-      liveUrl: 'https://example.com/apex-capital',
+      liveUrl: 'https://sadick119.github.io/Hallmark/',
+      githubUrl: 'https://github.com/Sadick119/Hallmark'
+    },
+    'designer-website': {
+      title: 'Designer Website — Creative Studio & Portfolio',
+      category: 'Web Design & UI/UX Development',
+      badge: 'Web Development',
+      image: 'assets/images/project-designer.svg',
+      client: 'Creative Studio & Designer Portfolio',
+      duration: '3 Weeks',
+      role: 'UI/UX Designer & Frontend Engineer',
+      overview: 'A high-concept visual portfolio and creative studio website featuring dark-mode neon aesthetics, interactive case study layouts, typography-driven hero sections, and client lead conversion funnels.',
+      technologies: ['HTML5', 'Modern CSS3', 'JavaScript', 'Figma', 'UI/UX Prototyping'],
+      deliverables: [
+        'Dark neon visual branding & interactive component library in Figma',
+        'Fluid responsive layout across smartphones, tablets, and high-res desktops',
+        'Interactive project inspection modals with live demonstration triggers',
+        'Integrated WhatsApp and direct email contact conversion channels'
+      ],
+      liveUrl: 'https://sadick119.github.io/portfolio/',
       githubUrl: 'https://github.com/Sadick119/portfolio'
     },
-    'taskflow-app': {
-      title: 'TaskFlow App — Productivity Redefined',
-      category: 'Mobile Application',
+    'circle-app': {
+      title: 'Circle ⭕ — Friends Photo Moments App',
+      category: 'Mobile Application Development',
       badge: 'App Development',
-      image: 'assets/images/project-app.svg',
-      client: 'TaskFlow Labs Inc',
-      duration: '8 Weeks',
-      role: 'Lead Flutter Mobile Engineer',
-      overview: 'Cross-platform mobile productivity suite built with Flutter and Firebase. Enables distributed teams to organize tasks, track sprint velocity, automate notifications, and visualize progress with real-time sync across iOS and Android.',
-      technologies: ['Flutter', 'Dart', 'Firebase Realtime DB', 'Cloud Functions', 'Provider/Bloc', 'REST APIs'],
+      image: 'assets/images/project-circle.svg',
+      client: 'Circle Social Labs',
+      duration: '6 Weeks',
+      role: 'Mobile Web App Engineer & Product Designer',
+      overview: 'A private group social mobile web app designed for close friend circles. Features live camera-only captures, custom countdown circles (1h, 2h, 4h), zero-vanity metrics, end-of-round photo compilation dumps, and full-screen native mobile viewport for iOS and Android.',
+      technologies: ['Mobile Web App', 'JavaScript', 'HTML5 Camera API', 'CSS Mobile Layout', 'PWA / Responsive'],
       deliverables: [
-        'Interactive kanban board and calendar scheduling',
-        'Biometric authentication and offline data persistence',
-        'Push notifications with custom sound alerts',
-        'Over 10,000 active beta downloads on Google Play & TestFlight'
+        'Friend Connections ("Also on Circle") discovery and profile avatars',
+        'Private Rooms with custom countdown timers (1h, 2h, 4h, or custom)',
+        'Live Camera capture with strict no-camera-roll upload rules for authenticity',
+        'End-of-round memory compilation dump with dark/light mode switching'
       ],
-      liveUrl: 'https://example.com/taskflow',
-      githubUrl: 'https://github.com/Sadick119/portfolio'
+      liveUrl: 'https://sadick119.github.io/circle/',
+      githubUrl: 'https://github.com/Sadick119/circle'
     },
-    'admin-dashboard': {
-      title: 'Admin Dashboard — Pulse Metrics',
-      category: 'UI/UX & Frontend Engineering',
-      badge: 'UI Design',
-      image: 'assets/images/project-dashboard.svg',
-      client: 'Pulse Commerce Global',
+    'gamesnight-app': {
+      title: 'GamesNight App — Group Trivia & Party Games',
+      category: 'Mobile Application Development',
+      badge: 'App Development',
+      image: 'assets/images/project-gamesnight.svg',
+      client: 'GamesNight Interactive',
       duration: '5 Weeks',
-      role: 'Senior UI/UX Designer & Frontend Engineer',
-      overview: 'Comprehensive SaaS analytics & management console. Delivers real-time telemetry on revenue, customer churn, user cohort retention, and inventory levels with customized data visualizations and role-based access control.',
-      technologies: ['React', 'TypeScript', 'Chart.js / Recharts', 'Tailwind CSS', 'Redux Toolkit', 'RESTful API'],
+      role: 'Mobile Game & UI Developer',
+      overview: 'A real-time group party and trivia mobile application designed for friends gathering in-person or remotely. Includes customizable trivia rounds, live countdown timers, team scoreboards, and instant buzzer mechanics.',
+      technologies: ['Mobile Web App', 'JavaScript', 'HTML5 Web Audio', 'CSS3 Animations', 'Mobile Game UI'],
       deliverables: [
-        'Over 40 responsive widget components and interactive charts',
-        'Dark mode optimized with crimson neon data highlights',
-        'CSV/PDF report export engine with custom filters',
-        'WCAG AA accessible interface with intuitive keyboard navigation'
+        'Multi-category trivia question banks with live timer challenges',
+        'Dynamic group team scoreboards and interactive buzzer buttons',
+        'Vibrant party-mode animations with sound effect integration',
+        'Optimized for mobile touch screens with one-handed interaction flow'
       ],
-      liveUrl: 'https://example.com/pulse-dashboard',
+      liveUrl: 'https://sadick119.github.io/portfolio/#portfolio',
       githubUrl: 'https://github.com/Sadick119/portfolio'
     }
   };
@@ -79,10 +98,10 @@ document.addEventListener('DOMContentLoaded', () => {
               <line x1="2" y1="12" x2="22" y2="12"></line>
               <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
              </svg>`,
-      description: 'I architect and code high-performance web applications and corporate websites that combine unforgettable visual polish with reliable engineering. Every site is designed mobile-first, SEO-tuned, and built to scale effortlessly.',
+      description: 'I architect and code high-performance web applications and corporate websites like the Hallmark School Portal and Creative Designer Website. Every site is designed mobile-first, SEO-tuned, and built to scale effortlessly.',
       features: [
-        'Full-stack Web Applications (React, Next.js, Node.js)',
-        'Custom E-Commerce & SaaS Platforms',
+        'Full-stack Web Applications & Educational Portals (e.g. Divine Hallmark School)',
+        'Custom Designer & Creative Studio Portfolio Sites',
         'Sub-second performance optimization & Core Web Vitals mastery',
         'Headless CMS setup (Sanity, Strapi, Contentful)',
         'Secure APIs, database integration & third-party gateways'
@@ -96,13 +115,13 @@ document.addEventListener('DOMContentLoaded', () => {
               <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
               <line x1="12" y1="18" x2="12.01" y2="18"></line>
              </svg>`,
-      description: 'Using modern cross-platform frameworks like Flutter and React Native, I develop buttery-smooth mobile applications that deliver native performance, offline capabilities, and seamless user experiences on both iOS and Android.',
+      description: 'I build engaging mobile experiences like Circle App (Private Friends Moments & Camera Capture) and GamesNight App (Social Trivia & Party Games) that deliver native feel, offline capabilities, and seamless user experiences on iOS and Android.',
       features: [
+        'Social & Community Mobile Applications (e.g. Circle Photo Moments)',
+        'Interactive Real-Time Party & Trivia Apps (e.g. GamesNight App)',
+        'Device Camera, Live Countdown, and Audio API integrations',
         'Cross-platform iOS & Android mobile application development',
-        'Real-time data synchronization & offline caching',
-        'In-app purchases, stripe/mobile money payment integrations',
-        'Push notification pipelines and background task workers',
-        'App Store and Google Play Store end-to-end publishing'
+        'Push notification pipelines and background task workers'
       ],
       process: ['1. Architecture & UX Flow', '2. State Management & Feature Slices', '3. Device Testing & Optimization', '4. App Store Submission']
     },
@@ -331,7 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const portfolioMobileNextBtn = document.getElementById('portfolio-mobile-next-btn');
   const portfolioDots = document.querySelectorAll('#portfolio-dots .dot');
   let currentPortfolioIndex = 0;
-  const totalProjects = 3;
+  const totalProjects = 4;
 
   function updatePortfolioSlider(index) {
     currentPortfolioIndex = (index + totalProjects) % totalProjects;
@@ -341,10 +360,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const offset = currentPortfolioIndex * 88;
       portfolioTrack.style.transform = `translateX(-${offset}%)`;
     } else if (window.innerWidth <= 992) {
-      const offset = currentPortfolioIndex * 100;
+      const offset = currentPortfolioIndex * 50;
       portfolioTrack.style.transform = `translateX(-${offset}%)`;
     } else {
-      portfolioTrack.style.transform = 'none';
+      const offset = currentPortfolioIndex * 34.5;
+      portfolioTrack.style.transform = `translateX(-${offset}%)`;
     }
 
     portfolioDots.forEach((dot, idx) => {
