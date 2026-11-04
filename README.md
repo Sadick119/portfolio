@@ -35,6 +35,16 @@ You can open the portfolio in two simple ways:
 
 ---
 
+## 📬 Connect with Me
+
+- **GitHub**: [@Sadick119](https://github.com/Sadick119)
+- **LinkedIn**: [Eric Sadick](https://linkedin.com/in/eric-sadick)
+- **Instagram**: [@_.sadick](https://instagram.com/_.sadick)
+- **WhatsApp**: [+233 24 954 6513](https://wa.me/233249546513)
+- **Email**: [ehrick119@gmail.com](mailto:ehrick119@gmail.com)
+
+---
+
 ## 📁 File Structure
 
 ```
